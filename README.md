@@ -1,2 +1,2 @@
-# Awesome-Game
-SI4 Awesome Game
+# Awesome-Clicker
+SI4 Awesome Clicker
