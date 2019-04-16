@@ -4,7 +4,10 @@ html{
 
 main{
   margin:auto;
-  width: 60%
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 nav{
