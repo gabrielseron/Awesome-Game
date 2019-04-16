@@ -1,6 +1,5 @@
 const body=document.querySelector('body')
 const div=document.querySelector('div')
-body.appendChild(div)
 const button=document.createElement('button')
 div.appendChild(button)
 const a=document.createElement('a')
