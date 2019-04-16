@@ -1,66 +1,160 @@
 <!DOCTYPE html>
 <html>
-    <head>
-  <meta charset="utf-8">
-  <title>JS game</title>
-  <meta name="Game JS" content="jeux, purge, politique, média">
-  <meta name="Apple" content="HomePod">
-  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-  <link rel="stylesheet" href="styles/main.css">
+
+<head>
+    <meta charset="utf-8">
+    <title>JS game</title>
+    <meta name="Game JS" content="jeux, purge, politique, média">
+    <meta name="Apple" content="HomePod">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="styles/main.css">
 </head>
+
 <body>
-  <header>
-    <nav class="naviguation">
-    <div class="naviguation_bar">
-      <div class="Logo_jeux">
-        <ul>
-          <li> <a href="../index.html"><img src="images/Logo.svg" alt="Logo_page_jeux"></a> </li>
-        </ul>
-      </div>
-      <div class="button_partage">
-        <div class="button_partage_fb">
-          <button type="button" name="button_partage_fb">Partager sur Facebook</button>
+    <header>
+        <nav class="naviguation">
+            <div class="naviguation_bar">
+                <div class="Logo_jeux">
+                    <ul>
+                        <li> <a href="../index.html"><img src="images/Logo.svg" alt="Logo_page_jeux"></a> </li>
+                    </ul>
+                </div>
+                <div class="button_partage">
+                    <div class="button_partage_fb">
+                        <button type="button" name="button_partage_fb">Partager sur Facebook</button>
+                    </div>
+                    <div class="button_partage_twitter">
+                        <button type="button" name="button_partage_twitter">Partager sur Twitter</button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="game_zone">
+
+
+            <div>
+                <div id="clickboard">
+                    <div id="score">
+                        <h2>la vie du boss</h2>
+                        <div id="bossScore">10 </div>
+                        <h2>votre grade de purification</h2>
+                        <div id="purifyScore">0</div>
+                        <h2>points de force</h2>
+                        <div id="argent">0</div>
+
+                    </div>
+                    <div class="méchant">
+                        <img class="bossPicture" src="img\gilesVerdeau.png" alt="boss1">
+                        <h2>GILES VERD'EAU</h2>
+                    </div>
+
+                    <div class="méchant bossHide">
+                        <img class="bossPicture" src="img/royaliste.png" alt="boss2">
+                        <h2></h2>
+                    </div>
+
+                    <div class="méchant bossHide">
+                        <img class="bossPicture" src="img/je vote à gauche.png" alt="boss3">
+                    </div>
+
+                </div>
+            </div>
+
+
+            <div class="skills_zone">
+
+                <div class="skill">
+
+                    <h2>AUGMENTEZ VOTRE FORCE DE FRAPPE AU CLIC</h2>
+
+
+                    <div class="blog">
+                        <h3>créer un blog pour inciter les gens à vous suivre</h3>
+                        <h6>prix : 50</h6>
+                        <p>augmente votre poing de +2pts </p>
+                        <div class="boutton">activer</div>
+                    </div>
+
+                    <div class="lettre">
+                        <h3>usine de lettre de menace</h3>
+                        <h6>prix : 100</h6>
+                        <p>augmente votre poing de +4pts</p>
+                        <div class="boutton">activer</div>
+                    </div>
+
+                    <div class="CSA">
+                        <h3>aller se plaindre au CSA </h3>
+                        <h6>prix : 100 000</h6>
+                        <p>augmente votre poing de +2 000pts</p>
+                        <div class="boutton">activer</div>
+                    </div>
+
+                    <div class="fakeNews">
+                        <h3>payer le prix fort pour propager une fake news qui a pourtant l'air vraie</h3>
+                        <h6>prix : 10 000 000</h6>
+                        <p>augmente votre poing de +20 000pts</p>
+                        <div class="boutton">activer</div>
+                    </div>
+                </div>
+
+                <div class="skill">
+
+
+
+
+
+                    <h2>AUGMENTEZ VOS GAIN DE POINTS DE PURIFICATION PAR SECONDE</h2>
+
+                    <div class="haters">
+                        <h3>achetez des haters !</h3>
+                        <h6>prix : 2 000</h6>
+                        <p>vous fait gagner +5 000pts de purification par seconde </p>
+                        <div class="boutton">activer</div>
+                    </div>
+
+
+                    <div class="suisse">
+                        <h3>leur trouver un compte en suisse</h3>
+                        <h6>prix : 1 000 000</h6>
+                        <p>vous fait gagner +20 000pts de purification par seconde</p>
+                        <div class="boutton">activer</div>
+                    </div>
+
+                    <div class="russie">
+                        <h3>aller demander un coup de pouce à Poutine</h3>
+                        <h6>prix : 10 000 000</h6>
+                        <p>vous fait gagner +100 000pts de purification par seconde</p>
+                        <div class="boutton">activer</div>
+                    </div>
+
+                </div>
+
+                <div class="skill">
+
+                </div>
+
+                <div class="skill">
+
+                </div>
+
+                <div class="skill">
+
+                </div>
+            </div>
+
         </div>
-        <div class="button_partage_twitter">
-          <button type="button" name="button_partage_twitter">Partager sur Twitter</button>
+    </main>
+
+    <footer>
+        <div class="content_logo">
+            <h3>En colaboration avec les studios RockStar© </h3> <img src="images/rockstar.png" alt="logo RockStar"
+                class="img_rock">
         </div>
-      </div>
-      </div>
-  </nav>
-  </header>
-
-  <main>
-    <div class="game_zone">
-
-    <div class="skills_zone">
-
-      <div class="skill">
-
-      </div>
-
-      <div class="skill">
-
-      </div>
-
-      <div class="skill">
-
-      </div>
-
-      <div class="skill">
-
-      </div>
-
-      <div class="skill">
-
-      </div>
-    </div>
-
-    </div>
-  </main>
-
-  <footer>
-    <div class="content_logo">
-<h3>En colaboration avec les studios RockStar©   </h3> <img src="images/rockstar.png" alt="logo RockStar" class="img_rock">
-    </div>
-    <p>Game Designer : Anouk Hervouet  </p> <p>Developpement team : Arthur Lasnel, Alban Mellinger, Gabriel Seron</p> <p> Marketing team :Gabriel Seron, Anouk Hervouet, Icham Alibenyahia  </p>
-  </footer>
+        <p>Game Designer : Anouk Hervouet </p>
+        <p>Developpement team : Arthur Lasnel, Alban Mellinger, Gabriel Seron</p>
+        <p> Marketing team :Gabriel Seron, Anouk Hervouet, Icham Alibenyahia </p>
+    </footer>
+    <script src="mechanique.js"></script>
