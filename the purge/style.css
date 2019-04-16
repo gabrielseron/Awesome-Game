@@ -1,0 +1,13 @@
+#boutton{
+    width: 20px;
+    height: 20px;
+    background-color: red;
+}
+.bossPicture{
+    width: 300px;
+    height: auto;
+    box-sizing: border-box;
+}
+.bossHide{
+    display: none;
+}
