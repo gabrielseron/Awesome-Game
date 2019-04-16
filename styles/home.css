@@ -7,10 +7,6 @@ body{
   width: 60%;
   font-family: 'Helvetica';
   font-size : 1.8rem;
-  text-transform: uppercase;
-  text-decoration: none;
-  font-size:1.2rem;
-  color:white;
 }
 
 .container{
@@ -28,7 +24,7 @@ body{
   margin:150px;
 }
 
-img{
+.logo>img{
   margin-top: 150px;
 }
 
@@ -47,7 +43,7 @@ img.coupDEtat{
 
 div button{
   position:absolute;
-  margin-top :400px;
+  margin-top :410px;
   margin-left:25px;
   height: 35px;
   width: 90px;
@@ -55,12 +51,22 @@ div button{
   border:none;
   border-radius:15px ;
   background : #D9000D;
+  pointer-events: none;
+  outline: none;
   transform: scale(1);
   transition: .3s ease-in-out;
 }
 
 div:hover button{
   transform: scale(1.6);
+}
+
+a{
+  text-decoration: none;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size:1.2rem;
+  color:white;
 }
 
 .zoom {
@@ -72,4 +78,4 @@ div:hover button{
 }
 
 .zoom:hover {
-  transform: scale(1.1);
+  transform: scale(1.04);
