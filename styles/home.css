@@ -27,8 +27,10 @@ button{
   height: 35px;
   width: 90px;
   border:none;
-  border-radius:30px ;
+  border-radius:15px ;
   background : #D9000D;
+  transform: scale(1);
+  transition: .3s ease-in-out;
 }
 
 a{
@@ -36,4 +38,8 @@ a{
   font-size:1.2rem;
   text-transform: uppercase;
   color:white;
+}
+
+div:hover button{
+  transform: scale(1.3);
 }
