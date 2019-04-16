@@ -1,0 +1,8 @@
+const body=document.querySelector('body')
+const div=document.querySelector('div')
+body.appendChild(div)
+const button=document.createElement('button')
+div.appendChild(button)
+const text=document.createTextNode('Jouer')
+button.appendChild(text)
+button.setAttribute("href","../index.html")
