@@ -17,7 +17,7 @@ function over()
             document.getElementByTagName("button").style.transition=".2s ease-in-out";
         }
 */
-
+/*
 div.onmouseenter = function() {
   document.getElementByName("button").style.transform="scale(1)";
   document.getElementByName("button").style.transition=".2s ease-in-out";;
@@ -26,3 +26,4 @@ div.onmouseenter = function() {
 div.onmouseleave = function() {
     document.getElementByName("button").style.transform="scale(1.3)";
 }
+*/

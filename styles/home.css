@@ -59,14 +59,10 @@ div button{
   background : #D9000D;
   pointer-events: none;
   outline: none;
-/*  transform: scale(1);
+/ transform: scale(1);
   transition: .2s ease-in-out;*/
 }
-/*
-div:hover button{
-  transform: scale(1.6);
-}
-*/
+
 a{
   text-decoration: none;
   text-transform: uppercase;
@@ -90,3 +86,9 @@ p{
 }
 .zoom:hover {
   transform: scale(1.04);
+}
+
+.music{
+  visibility: hidden;
+  position: absolute;
+}
