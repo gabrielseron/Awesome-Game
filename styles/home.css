@@ -1,25 +1,60 @@
 html{
-  background: black;
+  background-color: black;
 }
 
 body{
-  margin: auto;
+  margin:0 auto;
   width: 60%;
+  font-family: 'Helvetica';
+  font-size : 0.8rem;
+  color:white;
 }
 
-.container{
+.hero{
   display:flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin:80px;
 }
 
-img{
-  width : 25rem;
+.imgHome{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  width:200%;
+  height:500px;
+  background-image: url("../images/fondLogo.svg");
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
-button{
-  margin :20px;
-  background : #D9000D;
+.coupDEtat{
+  height:500px;
+  margin-left:50px;
+  margin-bottom:55px;
+  transition: transform .2s;
+}
+
+.coupDEtat:hover{
+  transform: scale(1.1);
+}
+
+a{
+  text-decoration: none;
+  color:white;
+}
+
+.play {
+  border:none;
+  border-radius: 28px;
+  margin-left:40px;
+  color: white;
+  font-size: 22px;
+  background: red;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+}
+
+.play:hover{
+	transform: scale(1.2);
 }
