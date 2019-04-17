@@ -1,15 +1,14 @@
 const body=document.querySelector('body')
-const div=document.querySelector('div')
+const play=document.createElement('div')
+body.appendChild(div)
 const button=document.createElement('button')
-div.appendChild(button)
+play.classList.add('play')
+play.setAttribute('')
+div.appendChild('button')
 const a=document.createElement('a')
-button.appendChild(a)
-a.setAttribute('href','index.html')
-const text=document.createTextNode('Jouer')
-a.appendChild(text)
-button.appendChild(a)
-a.setAttribute('href','index.html')
-console.log(a)
+button.appendChild('a')
+
+
 /*
 function over()
         {
