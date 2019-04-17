@@ -7,7 +7,7 @@ body{
   margin:0 auto;
   width: 60%;
   background-color: black;
-  font-family:Helvetica, Arial, sans-serif;
+  font-family: Helvetica, Arial, sans-serif;
   font-size : 1rem;
   color:white;
 }
@@ -22,6 +22,8 @@ h6{
 }
 
 ul{
+  font-size:0.8em;
+  line-height: 2;
   list-style:none;
 }
 
@@ -30,6 +32,7 @@ ul{
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
 }
 
 .imgHome{
@@ -50,32 +53,31 @@ ul{
   transition: transform .2s;
 }
 
-.coupDEtat:hover{
-  transform: scale(1.1);
+.play {
+  border:none;
+  border-radius: 28px;
+  position:absolute;
+  margin-left:20px;
+  visibility: hidden;
+  color: white;
+  font-size: 22px;
+  background: none;
+  padding: 10px 20px 10px 20px;
+  font-family: "Thug";
+  font-size:5em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.imgHome:hover .coupDEtat{
+  visibility: hidden;
+}
+
+.imgHome:hover .play{
+  visibility: visible;
 }
 
 a{
   text-decoration: none;
   color:white;
 }
-
-.play {
-  border:none;
-  border-radius: 28px;
-  margin-left:40px;
-  color: white;
-  font-size: 22px;
-  background: red;
-  padding: 10px 20px 10px 20px;
-  text-decoration: none;
-}
-
-
-/*
-.play:hover{
-	transform: scale(1.2);
-  visibility:hidden;
-}
-.play:after{
-}
-*/
