@@ -50,7 +50,7 @@ ul{
   height:500px;
   margin-left:50px;
   margin-bottom:55px;
-  transition: transform .2s;
+  transition: transform 0.2s;
 }
 
 .play {
@@ -67,6 +67,7 @@ ul{
   font-size:5em;
   text-decoration: none;
   text-transform: uppercase;
+  transition: transform 0.2s;
 }
 
 .imgHome:hover .coupDEtat{
