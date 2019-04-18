@@ -76,13 +76,18 @@ button {
   border: 2px solid;
   font-family: montserrat,sans-serif;
   margin: 3px;
-  height: 35px;
+  height: 105px;
 }
+
 
 .button_partage{
   display: flex;
   justify-content: flex-end;
   align-items: center;
+}
+
+.button_partage button{
+  height: 35px;
 }
 
 
