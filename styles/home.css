@@ -11,6 +11,7 @@ body{
   margin:0 auto;
   width: 60%;
   background-color: black;
+	background-image: url(../images/ringBackground.jpg);
   font-family: Helvetica, Arial, sans-serif;
   font-size : 1rem;
   color:white;
