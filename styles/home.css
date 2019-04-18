@@ -57,10 +57,18 @@ ul{
   background-position: center;
 }
 
+.hover{
+	display:flex;
+  justify-content: center;
+  align-items: center;
+	position:absolute;
+	margin-left:15px;
+}
+
 .coupDEtat{
-  height:500px;
-  margin-left:50px;
+  height:220px;
   margin-bottom:55px;
+	margin-left:20px;
   transition: transform 0.2s;
 }
 
@@ -68,26 +76,24 @@ ul{
   border:none;
   border-radius: 28px;
   position:absolute;
-	visibility: hidden;
   color: white;
   font-size: 22px;
   background: none;
   padding: 10px 20px 10px 20px;
-  font-family: "Thug";
+  font-family: "Thug", Helvetica, sans-serif;
   font-size:5em;
   text-decoration: none;
   text-transform: uppercase;
   transition: transform 0.2s;
+	visibility: hidden;
 }
 
-.imgHome:hover .coupDEtat{
+.hover:hover .coupDEtat{
   visibility: hidden;
 }
 
-.imgHome:hover .play{
+.hover:hover .play{
   visibility: visible;
-	width:200px;
-	height:200px;
 }
 
 a{
