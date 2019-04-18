@@ -68,8 +68,7 @@ ul{
   border:none;
   border-radius: 28px;
   position:absolute;
-  margin-left:20px;
-  visibility: hidden;
+	visibility: hidden;
   color: white;
   font-size: 22px;
   background: none;
@@ -81,16 +80,14 @@ ul{
   transition: transform 0.2s;
 }
 
-.hero{
-	  transition: transform 0.2s;
-}
-
-.hero:hover .coupDEtat{
+.imgHome:hover .coupDEtat{
   visibility: hidden;
 }
 
-.hero:hover .play{
+.imgHome:hover .play{
   visibility: visible;
+	width:200px;
+	height:200px;
 }
 
 a{
