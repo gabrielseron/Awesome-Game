@@ -1,11 +1,15 @@
-html {
-    height: 100vh;
+html,
+body {
+    user-select: none;
+    margin: 0;
+    padding: 0;
     width: 100%;
+
+    height: 100%;
     letter-spacing: 2px;
     color: white;
     font-family: 'Staatliches', cursive;
-    overflow: hidden;
-    cursor: url("../img/navigation.png"),pointer;
+    cursor: url("../img/boxing.png"), pointer;
 }
 
 
@@ -16,10 +20,20 @@ html {
 }
 
 .bossPicture {
-    width: 300px;
+    width: 40vh;
+    display: block;
     box-sizing: border-box;
-    cursor: url("../img/boxing.png"),pointer;
-    padding-top: 35px;
+    margin: 0 auto;
+    cursor: url("../img/boxing.png"), pointer;
+
+
+
+}
+
+#bossScore {
+    background-color: green;
+    width: 25vh;
+    height: 2vh;
 }
 
 .bossHide {
@@ -30,12 +44,22 @@ html {
     display: none;
 }
 
-.moneyImprove,
 .clicImprove {
     background-color: rgb(32, 32, 22);
     padding: 20px;
     margin: 20px;
     border-radius: 10px;
+    display: block;
+    transition: all 0.2s ease-in;
+}
+
+.moneyImprove {
+    background-color: rgb(32, 32, 22);
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    display: block;
+    transition: all 0.2s ease-in;
 }
 
 #upgrades {
@@ -51,14 +75,20 @@ html {
 
 #clickboard {
     float: left;
+    overflow: hidden;
     display: flex;
-    flex-direction: column;
     align-items: center;
+    justify-content: space-between;
     width: 65%;
     height: 100vh;
     background-color: rgb(0, 0, 0);
 }
 
+.bossName {
+    text-align: center;
+    font-size: 2.9em;
+    background-color: #5a0404;
+}
 
 .boutton {
     background: #850505;
@@ -86,7 +116,7 @@ html {
     margin: 0 auto;
     vertical-align: middle;
     vertical-align: middle;
-line-height: 40px;
+    line-height: 40px;
     background-color: rgb(153, 8, 8);
 
 }
@@ -94,7 +124,7 @@ line-height: 40px;
 .boutton:hover {
     background: #5a0404;
     text-decoration: none;
-    cursor: url("../img/money-bag.png"),pointer;
+    cursor: url("../img/money-bag.png"), pointer;
 
 }
 
@@ -115,31 +145,42 @@ h3 {
 #score {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
     width: 20vh;
-    height: 33vh;
-    padding: 28px;
-    text-align: center;
+    height: 70vh;
+    margin-left: 2%;
 }
 
 #bossScore {
-    font-size: 2.4em;
+    font-size: 3em;
     font-family: 'Ruda', sans-serif;
     font-weight: 500;
+    color: red;
 }
 
 #purifyScore {
-    font-size: 2.4em;
+    font-size: 3em;
+    font-family: 'Ruda', sans-serif;
+    font-weight: 500;
+    color: rgb(50, 50, 255);
+}
+
+#argent {
+    font-size: 3em;
+    text-align: left;
+    color: green;
     font-family: 'Ruda', sans-serif;
     font-weight: 500;
 }
 
-#argent {
-    font-size: 2.4em;
+#force {
+    font-size: 3em;
     text-align: left;
+    color: rgb(224, 205, 33);
     font-family: 'Ruda', sans-serif;
     font-weight: 500;
+
 }
 
 p {
@@ -147,7 +188,6 @@ p {
 }
 
 .luck {
-    display: none;
     background-color: rgb(19, 17, 17);
     padding: 20px;
     margin: 20px;
@@ -158,4 +198,53 @@ p {
 .haters,
 .jackpot {
     background-color: rgb(20, 20, 20);
+}
+
+.méchant {
+    width: 50vh;
+    height: auto;
+    margin-right: 16%;
+
+}
+
+.amelioration {
+    color: red;
+    transition: all ease 0.2s;
+}
+
+.amelioration:hover {
+    color: #850505;
+    transition: all ease 0.2s;
+}
+
+.investissement {
+    color: green;
+    transition: all ease 0.2s;
+}
+
+.investissement:hover {
+    color: rgb(6, 49, 6);
+    transition: all ease 0.2s;
+}
+
+.profession {
+    color: rgb(224, 205, 33);
+    transition: all ease 0.2s;
+}
+
+.profession:hover {
+    color: rgb(83, 76, 10);
+    transition: all ease 0.2s;
+}
+
+
+.showHide {
+    background-color: rgb(32, 32, 22);
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    display: none;
+    transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;
+
 }

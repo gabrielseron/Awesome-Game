@@ -4,21 +4,26 @@
             const bossScore = document.querySelector("#bossScore")
             const purifyScore = document.querySelector("#purifyScore")
             const purifyPoints = document.querySelector("#argent")
+            const clicImprove = document.querySelectorAll(".clicImprove")
             const investissements = document.querySelectorAll(".moneyImprove")
             const pro = document.querySelectorAll(".luck")
             const hitZone = document.querySelectorAll(".bossPicture")
             const audio = new Audio('../sounds/punch.mp3')
             const flouz = new Audio('../sounds/flouz.wav')
+            const bouttonAugmentez = document.querySelector(".amelioration")
+            const bouttonInvestir = document.querySelector(".investissement")
+            const bouttonEngager = document.querySelector(".profession")
+            const attackCompteur = document.querySelector("#force")
             let bossHealth1 = 10
-            let bossHealth2 = 1000
+            let bossHealth2 = 500
             let bossHealth3 = 10000
             let bossHealth4 = 100000
             let bossHealth5 = 1000000
             let bossHealth6 = 10000000
             let bossHealth7 = 100000000
-            let bossHealth8 = 1000000000
-            let bossHealth9 = 10000000000
-            let bossHealth10= 100000000000
+            let bossHealth8 = 5000000000
+            let bossHealth9 = 100000000000
+            let bossHealth10 = 1000000000000
             let purifyLevel = 0
             let attack = 1
             let compteur = 0
@@ -28,20 +33,24 @@
 
             function punch1() {
                 if (bossHealth1 > 1) {
-                     audio.play()
+                    audio.play()
                     bossHealth1 = bossHealth1 - attack
                     compteur = compteur + attack
                     purifyPoints.innerHTML = compteur.toLocaleString('fr')
                     bossScore.innerHTML = bossHealth1.toLocaleString('fr')
+                    document.querySelector('#bossScore').setAttribute('value', bossHealth1)
                 } else if (bossHealth1 <= 1) {
                     console.log('you win')
                     purifyLevel += 1
                     bossHealth1 = 0
+                    bossScore.innerHTML = bossHealth2.toLocaleString('fr')
                     compteur = compteur + attack
                     boss[0].classList.add("bossHide")
                     boss[1].classList.remove("bossHide")
                     purifyScore.innerHTML = purifyLevel
                     bossScore.innerHTML = bossHealth2.toLocaleString('fr')
+                    document.querySelector('#bossScore').setAttribute('value', bossHealth2)
+                    document.querySelector('#bossScore').setAttribute('max', bossHealth2)
 
                 }
             }
@@ -49,13 +58,15 @@
 
             function punch2() {
                 if (bossHealth2 > 1) {
-                     audio.play()
+                    audio.play()
                     bossHealth2 = bossHealth2 - attack
                     compteur = compteur + attack
                     purifyPoints.innerHTML = compteur.toLocaleString('fr')
                     bossScore.innerHTML = bossHealth2.toLocaleString('fr')
+                    document.querySelector('#bossScore').setAttribute('value', bossHealth2)
                 } else if (bossHealth2 <= 1) {
                     console.log('you win')
+                    bossScore.innerHTML = bossHealth3.toLocaleString('fr')
                     purifyLevel += 1
                     boss[1].classList.add("bossHide")
                     boss[2].classList.remove("bossHide")
@@ -63,6 +74,8 @@
                     purifyScore.innerHTML = purifyLevel
                     bossHealth1 = 0
                     bossHealth2 = 0
+                    document.querySelector('#bossScore').setAttribute('value', bossHealth3)
+                    document.querySelector('#bossScore').setAttribute('max', bossHealth3)
                 }
             }
 
@@ -72,18 +85,22 @@
                 boss[2].classList.remove('bossHide')
 
                 if (bossHealth3 > 1) {
-                     audio.play()
+                    audio.play()
                     bossHealth3 = bossHealth3 - attack
                     bossScore.innerHTML = bossHealth3.toLocaleString('fr')
                     compteur = compteur + attack
                     purifyPoints.innerHTML = compteur.toLocaleString('fr')
+                    document.querySelector('#bossScore').setAttribute('value', bossHealth3)
                 } else if (bossHealth3 <= 1) {
                     console.log('you win')
+                    bossScore.innerHTML = bossHealth4.toLocaleString('fr')
                     boss[2].classList.add("bossHide")
                     boss[3].classList.remove('bossHide')
                     purifyLevel += 1
                     bossHealth3 = 0
                     purifyScore.innerHTML = purifyLevel
+                    document.querySelector('#bossScore').setAttribute('value', bossHealth4)
+                    document.querySelector('#bossScore').setAttribute('max', bossHealth4)
 
                 }
             }
@@ -93,18 +110,22 @@
 
 
                 if (bossHealth4 > 1) {
-                     audio.play()
+                    audio.play()
                     bossHealth4 = bossHealth4 - attack
                     bossScore.innerHTML = bossHealth4.toLocaleString('fr')
                     compteur = compteur + attack
                     purifyPoints.innerHTML = compteur.toLocaleString('fr')
+                    document.querySelector('#bossScore').setAttribute('value', bossHealth4)
                 } else if (bossHealth4 <= 1) {
+                    bossScore.innerHTML = bossHealth5.toLocaleString('fr')
                     boss[3].classList.add("bossHide")
                     boss[4].classList.remove('bossHide')
                     console.log('you win')
                     purifyLevel += 1
                     bossHealth4 = 0
                     purifyScore.innerHTML = purifyLevel
+                    document.querySelector('#bossScore').setAttribute('value', bossHealth5)
+                    document.querySelector('#bossScore').setAttribute('max', bossHealth5)
                 }
             }
 
@@ -112,19 +133,22 @@
 
 
                 if (bossHealth5 > 1) {
-                     audio.play()
+                    audio.play()
                     bossHealth5 = bossHealth5 - attack
                     bossScore.innerHTML = bossHealth5.toLocaleString('fr')
                     compteur = compteur + attack
                     purifyPoints.innerHTML = compteur.toLocaleString('fr')
+                    document.querySelector('#bossScore').setAttribute('value', bossHealth5)
                 } else if (bossHealth5 <= 1) {
                     console.log('you win')
+                    bossScore.innerHTML = bossHealth6.toLocaleString('fr')
                     purifyLevel += 1
                     bossHealth5 = 0
                     boss[4].classList.add("bossHide")
                     boss[5].classList.remove('bossHide')
                     purifyScore.innerHTML = purifyLevel
-
+                    document.querySelector('#bossScore').setAttribute('value', bossHealth6)
+                    document.querySelector('#bossScore').setAttribute('max', bossHealth6)
                 }
             }
 
@@ -132,19 +156,22 @@
 
 
                 if (bossHealth6 > 1) {
-                     audio.play()
+                    audio.play()
                     bossHealth6 = bossHealth6 - attack
                     bossScore.innerHTML = bossHealth6.toLocaleString('fr')
                     compteur = compteur + attack
                     purifyPoints.innerHTML = compteur.toLocaleString('fr')
+                    document.querySelector('#bossScore').setAttribute('value', bossHealth6)
                 } else if (bossHealth6 <= 1) {
                     console.log('you win')
+                    bossScore.innerHTML = bossHealth7.toLocaleString('fr')
                     purifyLevel += 1
                     bossHealth6 = 0
                     boss[5].classList.add("bossHide")
                     boss[6].classList.remove('bossHide')
                     purifyScore.innerHTML = purifyLevel
-
+                    document.querySelector('#bossScore').setAttribute('value', bossHealth7)
+                    document.querySelector('#bossScore').setAttribute('max', bossHealth7)
                 }
             }
 
@@ -152,39 +179,47 @@
 
 
                 if (bossHealth7 > 1) {
-                     audio.play()
+                    audio.play()
                     bossHealth7 = bossHealth7 - attack
                     bossScore.innerHTML = bossHealth7.toLocaleString('fr')
                     compteur = compteur + attack
                     purifyPoints.innerHTML = compteur.toLocaleString('fr')
+                    document.querySelector('#bossScore').setAttribute('value', bossHealth7)
                 } else if (bossHealth7 <= 1) {
                     console.log('you win')
+                    bossScore.innerHTML = bossHealth8.toLocaleString('fr')
                     purifyLevel += 1
                     bossHealth7 = 0
                     boss[6].classList.add("bossHide")
                     boss[7].classList.remove('bossHide')
                     purifyScore.innerHTML = purifyLevel
+                    document.querySelector('#bossScore').setAttribute('value', bossHealth8)
+                    document.querySelector('#bossScore').setAttribute('max', bossHealth8)
 
-
-            }}
+                }
+            }
 
             function punch8() {
 
 
                 if (bossHealth8 > 1) {
-                     audio.play()
+                    audio.play()
                     bossHealth8 = bossHealth8 - attack
                     bossScore.innerHTML = bossHealth8.toLocaleString('fr')
                     compteur = compteur + attack
                     purifyPoints.innerHTML = compteur.toLocaleString('fr')
+                    document.querySelector('#bossScore').setAttribute('value', bossHealth8)
                 } else if (bossHealth8 <= 1) {
                     console.log('you win')
                     purifyLevel += 1
+                    bossHealth9 = bossHealth9 - attack
                     bossHealth8 = 0
                     boss[7].classList.add("bossHide")
                     boss[8].classList.remove('bossHide')
                     purifyScore.innerHTML = purifyLevel
                     bossHealth3 = 0
+                    document.querySelector('#bossScore').setAttribute('value', bossHealth9)
+                    document.querySelector('#bossScore').setAttribute('max', bossHealth9)
                 }
             }
 
@@ -192,19 +227,23 @@
 
 
                 if (bossHealth9 > 1) {
-                     audio.play()
+                    audio.play()
                     bossHealth9 = bossHealth9 - attack
                     bossScore.innerHTML = bossHealth9.toLocaleString('fr')
                     compteur = compteur + attack
                     purifyPoints.innerHTML = compteur.toLocaleString('fr')
+                    document.querySelector('#bossScore').setAttribute('value', bossHealth9)
                 } else if (bossHealth9 <= 1) {
                     console.log('you win')
+                    bossScore.innerHTML = bossHealth10.toLocaleString('fr')
                     purifyLevel += 1
                     bossHealth9 = 0
                     boss[8].classList.add("bossHide")
                     boss[9].classList.remove('bossHide')
                     purifyScore.innerHTML = purifyLevel
                     bossHealth3 = 0
+                    document.querySelector('#bossScore').setAttribute('value', bossHealth10)
+                    document.querySelector('#bossScore').setAttribute('max', bossHealth10)
                 }
             }
 
@@ -212,11 +251,12 @@
 
 
                 if (bossHealth10 > 1) {
-                     audio.play()
+                    audio.play()
                     bossHealth10 = bossHealth10 - attack
                     bossScore.innerHTML = bossHealth10.toLocaleString('fr')
                     compteur = compteur + attack
                     purifyPoints.innerHTML = compteur.toLocaleString('fr')
+                    document.querySelector('#bossScore').setAttribute('value', bossHealth10)
                 } else if (bossHealth10 <= 1) {
                     console.log('you win')
                     purifyLevel += 1
@@ -224,6 +264,7 @@
                     boss[9].classList.add("bossHide")
                     boss[10].classList.remove('bossHide')
                     purifyScore.innerHTML = purifyLevel
+                    finalDiv.classList.remove("showHide")
                     bossHealth3 = 0
                 }
             }
@@ -254,9 +295,9 @@
             // le blog pour 50$
 
             knob[0].addEventListener("click", function () {
-                if (compteur > 49) {
-                     flouz.play()
-                    compteur = compteur - 50
+                if (compteur > 19) {
+                    flouz.play()
+                    compteur = compteur - 20
                     purifyPoints.innerHTML = compteur.toLocaleString('fr')
                     console.log("blog")
                     console.log(compteur)
@@ -270,15 +311,17 @@
 
             knob[1].addEventListener("click", function () {
                 if (compteur > 99) {
-                     flouz.play()
-                    compteur = compteur - 100
+                    flouz.play()
+                    compteur = compteur +400
                     purifyPoints.innerHTML = compteur.toLocaleString('fr')
                     console.log("achat de haters")
                     for (i = 0; i < investissements.length; i++) {
-                        investissements[i].style.display = "block";
+                        investissements[i].classList.add(".showHide")
 
                     }
                     knob[1].style.display = "none";
+                    acompteur=compteur+500
+
                 }
             })
 
@@ -287,7 +330,7 @@
 
             knob[2].addEventListener("click", function () {
                 if (compteur > 99) {
-                     flouz.play()
+                    flouz.play()
                     compteur = compteur - 100
                     purifyPoints.innerHTML = compteur.toLocaleString('fr')
                     console.log("achat de lettres menaçantes")
@@ -305,7 +348,7 @@
 
             knob[3].addEventListener("click", function () {
                 if (compteur > 4999) {
-                     flouz.play()
+                    flouz.play()
                     compteur = compteur - 5000
                     purifyPoints.innerHTML = compteur.toLocaleString('fr')
                     console.log("le csa n'est pas content")
@@ -319,7 +362,7 @@
 
             knob[4].addEventListener("click", function () {
                 if (compteur > 19999) {
-                     flouz.play()
+                    flouz.play()
                     compteur = compteur - 20000
                     purifyPoints.innerHTML = compteur.toLocaleString('fr')
                     console.log("fake newssssss")
@@ -333,7 +376,7 @@
 
             knob[5].addEventListener("click", function () {
                 if (compteur > 99999) {
-                     flouz.play()
+                    flouz.play()
                     compteur = compteur - 100000
                     purifyPoints.innerHTML = compteur.toLocaleString('fr')
                     console.log("fake newssssss")
@@ -348,7 +391,7 @@
 
             knob[6].addEventListener("click", function () {
                 if (compteur > 999999) {
-                     flouz.play()
+                    flouz.play()
                     compteur = compteur - 1000000
                     purifyPoints.innerHTML = compteur.toLocaleString('fr')
                     console.log("fake newssssss")
@@ -364,7 +407,7 @@
 
             knob[7].addEventListener("click", function () {
                 if (compteur > 49999999) {
-                     flouz.play()
+                    flouz.play()
                     compteur = compteur - 50000000
                     purifyPoints.innerHTML = compteur.toLocaleString('fr')
                     console.log("fake newssssss")
@@ -381,11 +424,9 @@
 
             knob[8].addEventListener("click", function () {
                 if (compteur > 9999999999) {
-                     flouz.play()
+                    flouz.play()
                     compteur = compteur - 10000000000
                     purifyPoints.innerHTML = compteur.toLocaleString('fr')
-                    console.log("fake newssssss")
-                    console.log(compteur)
                     attack = attack + 450000000
 
                 }
@@ -403,12 +444,11 @@
 
             knob[9].addEventListener("click", function () {
                 if (compteur > 19) {
-                     flouz.play()
+                    flouz.play()
                     compteur = compteur - 20
                     purifyPoints.innerHTML = compteur.toLocaleString('fr')
-                    console.log("achat de haters enragés")
                     setInterval(function () {
-                        compteur = compteur + 0.5
+                        compteur = compteur + 1
                     }, 1000)
                 }
             })
@@ -417,12 +457,11 @@
 
             knob[10].addEventListener("click", function () {
                 if (compteur > 99) {
-                     flouz.play()
+                    flouz.play()
                     compteur = compteur - 100
                     purifyPoints.innerHTML = compteur.toLocaleString('fr')
-                    console.log("achat de haters enragés")
                     setInterval(function () {
-                        compteur = compteur + 1.5
+                        compteur = compteur + 5
                     }, 1000)
                 }
             })
@@ -434,15 +473,15 @@
 
             knob[11].addEventListener("click", function () {
                 if (compteur > 999) {
-                     flouz.play()
+                    flouz.play()
                     compteur = compteur - 1000
                     purifyPoints.innerHTML = compteur.toLocaleString('fr')
-                    console.log("achat de haters enragés")
+                    knob[11].style.display = "none";
                     for (i = 0; i < pro.length; i++) {
-                        pro[i].style.display = "block";
+                        pro[i].classList.add("showHide")
                     }
                     setInterval(function () {
-                        compteur = compteur + 16
+                        compteur = compteur + 60
                     }, 1000)
                 }
             })
@@ -452,12 +491,12 @@
 
             knob[12].addEventListener("click", function () {
                 if (compteur > 9999) {
-                     flouz.play()
+                    flouz.play()
                     compteur = compteur - 10000
                     purifyPoints.innerHTML = compteur.toLocaleString('fr')
                     console.log("achat de haters enragés")
                     setInterval(function () {
-                        compteur = compteur + 180
+                        compteur = compteur + 600
                     }, 1000)
                 }
             })
@@ -466,12 +505,12 @@
 
             knob[13].addEventListener("click", function () {
                 if (compteur > 99999) {
-                     flouz.play()
+                    flouz.play()
                     compteur = compteur - 100000
                     purifyPoints.innerHTML = compteur.toLocaleString('fr')
                     console.log("achat de haters enragés")
                     setInterval(function () {
-                        compteur = compteur + 2000
+                        compteur = compteur + 6500
                     }, 1000)
                 }
             })
@@ -481,12 +520,12 @@
 
             knob[14].addEventListener("click", function () {
                 if (compteur > 999999) {
-                     flouz.play()
+                    flouz.play()
                     compteur = compteur - 1000000
                     purifyPoints.innerHTML = compteur.toLocaleString('fr')
                     console.log("achat de haters enragés")
                     setInterval(function () {
-                        compteur = compteur + 25000
+                        compteur = compteur + 70000
                     }, 1000)
                 }
             })
@@ -496,12 +535,12 @@
 
             knob[15].addEventListener("click", function () {
                 if (compteur > 9999999) {
-                     flouz.play()
+                    flouz.play()
                     compteur = compteur - 10000000
                     purifyPoints.innerHTML = compteur.toLocaleString('fr')
                     console.log("achat de haters enragés")
                     setInterval(function () {
-                        compteur = compteur + 300000
+                        compteur = compteur + 1000000
                     }, 1000)
                 }
             })
@@ -512,12 +551,12 @@
 
             knob[16].addEventListener("click", function () {
                 if (compteur > 999999999) {
-                     flouz.play()
+                    flouz.play()
                     compteur = compteur - 1000000000
                     purifyPoints.innerHTML = compteur.toLocaleString('fr')
                     console.log("poutine")
                     setInterval(function () {
-                        compteur = compteur + 35000000
+                        compteur = compteur + 200000000
 
 
 
@@ -532,15 +571,15 @@
             // les professionnels
 
 
-            //enquêteur 10 000 000 000 $
+            //enquêteur 1 000 000 000 $
 
             knob[17].addEventListener("click", function () {
-                if (compteur > 9999999999) {
-                     flouz.play()
-                    compteur = compteur - 10000000000
+                if (compteur > 999999999) {
+                    flouz.play()
+                    compteur = compteur - 1000000000
                     purifyPoints.innerHTML = compteur.toLocaleString('fr')
                     console.log("poutine")
-                        attack = attack*2
+                    attack = attack * 1.5
                 }
             })
 
@@ -550,11 +589,11 @@
 
             knob[18].addEventListener("click", function () {
                 if (compteur > 99999999999) {
-                     flouz.play()
+                    flouz.play()
                     compteur = compteur - 100000000000
                     purifyPoints.innerHTML = compteur.toLocaleString('fr')
                     console.log("poutine")
-                        attack = attack*5
+                    attack = attack * 5
                 }
             })
 
@@ -563,12 +602,12 @@
 
             knob[19].addEventListener("click", function () {
                 if (compteur > 9999) {
-                     flouz.play()
+                    flouz.play()
                     compteur = compteur - 10000
                     purifyPoints.innerHTML = compteur.toLocaleString('fr')
                     console.log("poutine")
                     setInterval(function () {
-                        compteur = compteur + 35000000
+                        compteur = compteur + 2500
 
 
 
@@ -582,18 +621,6 @@
 
             // _____________________________________________________________________________________________
 
-
-
-            // fonction pour debug
-
-            // document.addEventListener("click", function () {
-            //     console.log(bossHealth1, bossHealth2, bossHealth3)
-            //     console.log(compteur)
-            // })
-
-
-
-
             // code de triche argent +10 000 000
 
             function cheat() {
@@ -601,6 +628,8 @@
                 console.log("tu triche")
 
             }
+            // code de triche argent +100 000 000 000 000
+
 
             function cheat1() {
                 compteur = compteur + 100000000000000
@@ -608,8 +637,41 @@
 
             }
 
-            // fonction pour load l'argent chaque seconde
+            // fonction pour load l'argent chaque seconde sur le compteur dédié
 
             setInterval(function () {
                 purifyPoints.innerHTML = compteur.toLocaleString('fr')
+                document.title= compteur.toLocaleString('fr')
             }, 700)
+            setInterval(function () {
+                attackCompteur.innerHTML = attack.toLocaleString('fr')
+            }, 200)
+
+
+
+
+            // volets déroulants pur js une fois les compétences débloqués
+
+            bouttonAugmentez.addEventListener("click", function () {
+                for (i = 0; i < clicImprove.length; i++) {
+                    clicImprove[i].classList.toggle("showHide")
+                }
+            })
+
+            bouttonInvestir.addEventListener("click", function () {
+                if (window.getComputedStyle(knob[1]).display === "none") {
+                    for (i = 0; i < investissements.length; i++) {
+                        investissements[i].classList.toggle("showHide")
+                    }
+
+                }
+            })
+
+            bouttonEngager.addEventListener("click", function () {
+                if (window.getComputedStyle(knob[11]).display === "none") {
+                    for (i = 0; i < pro.length; i++) {
+                        pro[i].classList.toggle("showHide")
+                    }
+
+                }
+            })
