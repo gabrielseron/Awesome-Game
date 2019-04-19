@@ -10,6 +10,7 @@
             const hitZone = document.querySelectorAll(".bossPicture")
             const audio = new Audio('../sounds/punch.mp3')
             const flouz = new Audio('../sounds/flouz.wav')
+            const verdez = new Audio('../sounds/Verdez.wav')
             const sarkozy = new Audio('../sounds/Sarkozy.mp3')
             const menes = new Audio('../sounds/Menes.mp3')
             const melenchon = new Audio('../sounds/Melenchon.mp3')
@@ -60,8 +61,7 @@
                     bossScore.innerHTML = bossHealth2.toLocaleString('fr')
                     document.querySelector('#bossScore').setAttribute('value', bossHealth2)
                     document.querySelector('#bossScore').setAttribute('max', bossHealth2)
-                    menes.play()
-
+                      menes.play()
                 }
             }
 
@@ -87,7 +87,6 @@
                     document.querySelector('#bossScore').setAttribute('value', bossHealth3)
                     document.querySelector('#bossScore').setAttribute('max', bossHealth3)
                     ardisson.play()
-
                 }
             }
 
@@ -140,7 +139,6 @@
                     document.querySelector('#bossScore').setAttribute('value', bossHealth5)
                     document.querySelector('#bossScore').setAttribute('max', bossHealth5)
                     hanouna.play()
-
                 }
             }
 
@@ -165,7 +163,6 @@
                     document.querySelector('#bossScore').setAttribute('value', bossHealth6)
                     document.querySelector('#bossScore').setAttribute('max', bossHealth6)
                     sarkozy.play()
-
                 }
             }
 
@@ -190,7 +187,6 @@
                     document.querySelector('#bossScore').setAttribute('value', bossHealth7)
                     document.querySelector('#bossScore').setAttribute('max', bossHealth7)
                     cahuzac.play()
-
                 }
             }
 
@@ -241,7 +237,6 @@
                     document.querySelector('#bossScore').setAttribute('value', bossHealth9)
                     document.querySelector('#bossScore').setAttribute('max', bossHealth9)
                     melenchon.play()
-
                 }
             }
 
@@ -267,7 +262,6 @@
                     document.querySelector('#bossScore').setAttribute('value', bossHealth10)
                     document.querySelector('#bossScore').setAttribute('max', bossHealth10)
                     mlp.play()
-
                 }
             }
 
@@ -281,7 +275,7 @@
                     compteur = compteur + attack
                     purifyPoints.innerHTML = compteur.toLocaleString('fr')
                     document.querySelector('#bossScore').setAttribute('value', bossHealth10)
-                } else if (bossHealth10< 1) {
+                } else if (bossHealth10 <= 1) {
                     console.log('you win')
                     purifyLevel += 1
                     bossHealth10 = 0
